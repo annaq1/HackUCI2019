@@ -10,7 +10,13 @@ var config = {
   firebase.initializeApp(config);
   var storage = firebase.storage();
   var storageRef = storage.ref();
-  var imageRef = storageRef.child('_MG_7089.JPG');
+
+
+// generate random number (1-5)
+  var totalnum = 5;
+  var imageindex = Math.floor((Math.random() * totalnum) + 1);
+
+  var imageRef = storageRef.child(imageindex + '.jpg');
   // First we sign in the user anonymously
 firebase.auth().signInAnonymously().then(function() {
 // Once the sign in completed, we get the download URL of the image
@@ -22,3 +28,9 @@ document.querySelector('img').src = url;
 console.error(error);
 });
 });
+/////////////////////////////////////////////////////
+
+
+
+
+
