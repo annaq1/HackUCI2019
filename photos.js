@@ -10,7 +10,7 @@ var config = {
   firebase.initializeApp(config);
   var storage = firebase.storage();
   var storageRef = storage.ref();
-  var imageRef = storageRef.child('20140412_114509.jpg');
+  var imageRef = storageRef.child('_MG_7089.JPG');
   // First we sign in the user anonymously
 firebase.auth().signInAnonymously().then(function() {
 // Once the sign in completed, we get the download URL of the image
