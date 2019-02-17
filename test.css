@@ -49,6 +49,13 @@ body {
     margin: 10px;
     height: 100px;
     width: 100px;
+    outline: none;
+}
+#no:hover{
+    background-color:   rgb(250, 101, 101);
+}
+#no:active{
+    background-color:  rgb(207, 15, 15);
 }
 
 #yes {
@@ -62,7 +69,17 @@ body {
     margin: 10px;
     height: 100px;
     width: 100px;
+    outline: none;
+    -webkit-animation-duration: 0.4s;
+    transition-duration: 0.4s;
 }
+#yes:hover{
+    background-color:   rgb(61, 226, 66);
+}
+#yes:active{
+    background-color:  rgb(42, 128, 45);
+}
+
 
 #super {
     background-color: rgb(72, 95, 226);
@@ -75,6 +92,13 @@ body {
     margin: 10px;
     height: 100px;
     width: 100px;
+    outline: none;
+}
+#super:hover{
+    background-color:   rgb(116, 135, 243);
+}
+#super:active{
+    background-color:  rgb(48, 71, 199);
 }
 
 
