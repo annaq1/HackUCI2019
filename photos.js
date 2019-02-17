@@ -14,7 +14,9 @@ var config = {
 
 // generate random number (1-5)
   var totalnum = 25;
+  var oldIndexes = []; // holds indexes
   var imageindex = Math.floor((Math.random() * totalnum) + 1);
+  oldIndexes.push(imageindex);
 
   var imageRef = storageRef.child(imageindex + '.jpg');
   // First we sign in the user anonymously
@@ -30,15 +32,24 @@ console.error(error);
 });
 /////////////////////////////////////////////////////
 
+
 function newRandomImage()
 {
-  console.log("click");
+  if (oldIndexes.length == totalnum)
+  {
+    oldIndexes = [];
+  }
   var newIndex = Math.floor((Math.random() * totalnum) + 1);
+  while (oldIndexes.includes(newIndex))
+  {
+    newIndex = Math.floor((Math.random() * totalnum) + 1);
+  }
+  oldIndexes.push(newIndex);
   imageRef = storageRef.child(newIndex + '.jpg');
   firebase.auth().signInAnonymously().then(function() {
-  imageRef.getDownloadURL().then(function(url)                             {
-  document.querySelector('img').src = url;
-  console.log(url);
+  imageRef.getDownloadURL().then(function(url)                             
+  {
+    document.querySelector('img').src = url;
   }).catch(function(error) {
   console.error(error);
   });
