@@ -5,6 +5,7 @@
 <link rel="stylesheet" type= "text/css" href = "modal.css">
 </head>
 <body>
+       
 <div id = "outer">
     <h1>Blake Meets Jerry</h1>
     <div id = "center">
@@ -21,9 +22,12 @@
     </div>
     <br>
     <ul>
-        <li><button id="no" onclick="newRandomImage()">Thank you,<br> Next</button></li>
-        <li><button id="yes" onclick="newRandomImage()">I see it<br> I like it <br> I want it</button></li>
-        <li><button id="super" onclick="newRandomImage()">Let's Goooo <br> -ooooo</button></li>
+        <li><button id="no" onclick="newRandomImage(); playsingle()">Thank you,<br> Next</button></li>
+        <li><button id="yes" onclick="newRandomImage(); playnice()">I see it<br> I like it <br> I want it</button></li>
+        <li><button id="super" onclick="newRandomImage(); playletsgo()">Let's Goooo <br> -ooo!!!</button></li>
+        <audio id="single4lyfe" src="https://firebasestorage.googleapis.com/v0/b/hackuci2019.appspot.com/o/single.3gp?alt=media&token=95cc3af6-c708-41ef-8002-efe7af069137"></audio>
+        <audio id="nice" src="https://firebasestorage.googleapis.com/v0/b/hackuci2019.appspot.com/o/Nice.3gp?alt=media&token=675f6aa1-6913-4b06-ac62-781ffca67056"></audio>
+        <audio id="letsgo" src="https://firebasestorage.googleapis.com/v0/b/hackuci2019.appspot.com/o/LetsGo.3gp?alt=media&token=e0f183c4-87a1-4b37-8796-7ac17427cfe3"></audio>
 
     </ul>
         

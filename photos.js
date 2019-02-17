@@ -13,7 +13,7 @@ var config = {
 
 
 // generate random number (1-5)
-  var totalnum = 19;
+  var totalnum = 25;
   var imageindex = Math.floor((Math.random() * totalnum) + 1);
 
   var imageRef = storageRef.child(imageindex + '.jpg');
@@ -45,6 +45,24 @@ function newRandomImage()
   });
 }
 
+function playsingle()
+{
+  var audio = document.getElementById("single4lyfe");
+  audio.play();
+}
+
+function playnice()
+{
+  var audio = document.getElementById("nice");
+  audio.play();
+}
+
+
+function playletsgo()
+{
+  var audio = document.getElementById("letsgo");
+  audio.play();
+}
 
 
 
