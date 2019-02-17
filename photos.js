@@ -30,6 +30,21 @@ console.error(error);
 });
 /////////////////////////////////////////////////////
 
+function newRandomImage()
+{
+  console.log("click");
+  var newIndex = Math.floor((Math.random() * totalnum) + 1);
+  imageRef = storageRef.child(newIndex + '.jpg');
+  firebase.auth().signInAnonymously().then(function() {
+  imageRef.getDownloadURL().then(function(url)                             {
+  document.querySelector('img').src = url;
+  console.log(url);
+  }).catch(function(error) {
+  console.error(error);
+  });
+  });
+}
+
 
 
 
