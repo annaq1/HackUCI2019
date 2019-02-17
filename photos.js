@@ -13,7 +13,7 @@ var config = {
 
 
 // generate random number (1-5)
-  var totalnum = 25;
+  var totalnum = 41;
   var oldIndexes = []; // holds indexes
   var imageindex = Math.floor((Math.random() * totalnum) + 1);
   oldIndexes.push(imageindex);
