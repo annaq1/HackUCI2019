@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type= "text/css" href = "test.css">
+<link rel="stylesheet" type= "text/css" href = "modal.css">
 </head>
 <body>
 <div id = "outer">
@@ -9,9 +10,14 @@
     <div id = "center">
         <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
         <script src = "photos.js"></script>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/WelshCorgi.jpeg/220px-WelshCorgi.jpeg">
-        <p id = "name">Good Dog </p>
-        <p id = "age">5</p>
+        <script type = "text/javascript" src = "modal.js"></script>
+        <img onclick = "openModal()">
+        
+        <br>
+        <div id = "nameDisplay">
+        <p id = "name">Blake Wakasa </p>
+        <p id = "age">20</p>
+        </div>
     </div>
     <br>
     <ul>
@@ -20,9 +26,37 @@
         <li><button id="super" onclick="newRandomImage()">Let's Goooo <br> -ooooo</button></li>
 
     </ul>
-    
-    
-    
+        
 </div>
+
+<!-- Modal -->
+<div class = "modal" id = "myModal">
+
+        <div class = "modal-content">
+            <span onclick = "closeModal()" class = "close">&times;</span>
+            <div id = "modal-text">
+                <h1>Task</h1>
+                <h3>Title</h3>
+                <input class = "t" type = "text"></input>
+                <h3>Description</h3>
+                <input class = "t" type = "text"></input>
+                <h3>Due Date</h3>
+                <input class = "t" type = "date"></input><br>
+                <div class = "row">
+                    <div class = "column">
+                        <h3>Task Color</h3>
+                        <input value = "#979595" class = "color-wheel" type = "color"></input>
+                    </div>
+                    <div class = "column">
+                        <h3>Font Color</h3>
+                       <input class = "color-wheel" type = "color"></input>
+                    </div>
+                </div>
+                <button id = "enter" onclick = "enter()">Enter</button>
+            </div>
+        </div>
+    
+    </div>
+
 </body>
 </html>

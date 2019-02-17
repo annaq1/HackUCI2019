@@ -12,6 +12,20 @@ body {
     background-color: lemonchiffon;
 }
 
+#nameDisplay {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+}
+
+#name {
+    font-weight: bold;
+    display:inline;
+    margin-right: 10px;
+}
+#age {
+    display:inline;
+}
+
 #outer {
     text-align:center;
 }
@@ -32,8 +46,6 @@ body {
     text-align: center;
     font-size: 16px;
     border-radius: 50%;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
     margin: 10px;
     height: 100px;
     width: 100px;
@@ -47,8 +59,6 @@ body {
     text-align: center;
     font-size: 16px;
     border-radius: 50%;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
     margin: 10px;
     height: 100px;
     width: 100px;
@@ -62,16 +72,11 @@ body {
     text-align: center;
     font-size: 16px;
     border-radius: 50%;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
     margin: 10px;
     height: 100px;
     width: 100px;
 }
 
-button:hover {
-    background-color: darkgreen;
-}
 
 li {
     display: inline;

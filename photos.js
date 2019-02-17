@@ -13,7 +13,7 @@ var config = {
 
 
 // generate random number (1-5)
-  var totalnum = 5;
+  var totalnum = 19;
   var imageindex = Math.floor((Math.random() * totalnum) + 1);
 
   var imageRef = storageRef.child(imageindex + '.jpg');
